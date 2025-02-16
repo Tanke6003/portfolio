@@ -1,0 +1,116 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/theme';
+.badge {
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px 10px 10px 0; 
+}
+
+
+.linkedin {
+    background-color: rgb(10, 102, 194); 
+    color: white;
+}
+
+.linkedin:hover {
+    background-color: #005C8E; 
+}
+
+
+.badge-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px; 
+}
+
+
+@media (max-width: 768px) {
+    .badge {
+        font-size: 0.9rem; 
+        padding: 8px 10px;  
+        margin: 8px 5px;  
+    }
+    .badge-icon {
+        width: 25px;  
+        height: 25px;
+    }
+    .badge {
+        display: flex;  
+        justify-content: center;
+        width: 100%;
+        text-align: center; 
+    }
+}
+
+/* GitHub */
+.github {
+    background-color: #000000; /* GitHub's brand color */
+    color: white;
+}
+
+.github:hover {
+    background-color: #333; /* Darker GitHub color on hover */
+}
+
+/* YouTube */
+.youtube {
+    background-color: #FF0000; /* YouTube's brand color */
+    color: white;
+}
+
+.youtube:hover {
+    background-color: #CC0000; /* Darker YouTube color on hover */
+}
+
+.email-badge {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.email-badge:hover {
+    //quitarle opacidad al color primary-color
+    background-color: var(--primary-color);
+    filter: brightness(110%); /* Similar a lighten() */
+}
+
+.email-badge {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+//cuando de click sobre el badge de email hacer animacion
+.email-badge:active {
+    transform: translateY(2px);
+}
+
+// .tooltip-custom {
+//     background-color: #4B5A38;
+//     color: white;
+//     font-size: 0.8rem;
+//     padding: 5px 10px;
+//     border-radius: 5px;
+//     position: absolute;
+//     bottom: 50%; /* Lo posiciona arriba */
+//     left:115%;
+//     transform: translateX(-50%);
+//     white-space: nowrap;
+//     z-index: 10;
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: opacity 0.3s ease, visibility 0.3s ease;
+// }
+
+// .tooltip-custom.show {
+//     opacity: 1;
+//     visibility: visible;
+// }

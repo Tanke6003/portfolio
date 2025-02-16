@@ -2,16 +2,22 @@
 <body  >
     <!-- Navigation Menu -->
     <app-header></app-header>
-
+    <select name="" id=""  (change)="setTheme($event)">
+        @for (theme of themes; track theme) {
+            <option value="{{theme}}">{{theme}}</option>
+       
+            }
+    </select>
     <!-- About Me Section -->
-    <section id="about" class="container mt-5">
+    <section id="about" class="container mt-4">
+        <h2 class="title" style="padding-left: 20px;">About Me</h2>
         <app-about-me></app-about-me>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container mt-5 ">
+    <section id="projects" class="container mt-4 ">
         <h2 class="title"style="padding-left: 20px;">Projects</h2>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4">
                 <div class="card">
                     <img src="project1.jpg" class="card-img-top" alt="Project 1">
@@ -39,11 +45,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <app-projects></app-projects>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="container mt-5">
+    <section id="skills" class="container mt-4">
         <h2 class="title" style="padding-left: 20px;">Skills</h2>
         <ul>
             <li>JavaScript</li>
@@ -55,12 +62,13 @@
         </ul>
     </section>
     <!-- Social Section -->
-    <section id="social" class="container mt-5">
-        <h2 class="title"style="padding-left: 20px;">Social</h2>
-        <app-social></app-social>
+    <section id="network" class="container mt-4">
+        <h2 class="title"style="padding-left: 20px;">Network</h2>
+        <app-network></app-network>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="container mt-5">
+    <section id="contact" class="container mt-4">
+        <h2 class="title" style="padding-left: 20px;">Contact</h2>
         <app-contact></app-contact>
     </section>
 

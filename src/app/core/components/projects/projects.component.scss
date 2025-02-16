@@ -1,0 +1,31 @@
+@import '../../../../styles/theme';
+
+.card-body {
+  background-color: var(--base-color-light);
+  
+}
+.card-footer {
+  background-color: var(--tertiary-color);
+  color: var(--base-color)!important;
+  .btn {
+    
+    color: var(--base-color);
+    
+  }
+}
+.project-card {
+  margin-bottom: 20px;
+  //bbox shadow  para  darle un efecto de elevación
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.377);
+}
+//card-text para darle un color al texto de la card y limitar a que sean solo un numero de palabras 40
+.card-text {
+  color: var(--font-color-dark);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 30;
+    line-clamp: 30;
+    -webkit-box-orient: vertical;
+
+}

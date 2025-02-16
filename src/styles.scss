@@ -1,127 +1,78 @@
-// Paleta de colores
+// styles.scss
+@import './styles/colors';
+@import './styles/theme';
 
-$color-base-fondo: #F2F1E1;      // Crema claro
-$color-principal-claro: #A8B89F; // Verde seco claro
-$color-principal: #6B7B56;       // Verde seco medio
-$color-secundario: #4B5A38;      // Verde seco oscuro
-$color-fondo-secundario: #FFFFFF; // Blanco
-$color-detalle: #D1D1D1;         // Gris suave
-$color-acciones: #4E3629;        // Color de acción (puede ser un tono marrón)
-// Uso de las variables
+.green-brown {
+  :root {
+    @include apply-palette($green-brown);
+  }
+}
+.soft-blue {
+  :root {
+    @include apply-palette($blue-soft);
+  }
+}
+.royal-blue {
+  :root {
+    @include apply-palette($royal-blue);
+  }
+}
+.royal-purple {
+  :root {
+    @include apply-palette($royal-purple);
+  }
+}
+.purple {
+  :root {
+    @include apply-palette($purple);
+  }
+}
+
+
+// Aplicar la paleta Green & Brown por defecto
+@include apply-palette($green-brown);
 body {
-  background-color: $color-base-fondo;
+  
+
+  background-color: var(--base-color);
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
+
 }
-.navbar-light{
-    background-color: $color-principal !important;
-    color: #f0eaea !important;
-}
-.navbar-brand{
-    color: #f0eaea !important;
-}
-.nav-link{
-    color: #f0eaea !important;
-}
-// .bg-light
-// {
-//     background-color: $color-fondo-secundario!important;
-// }
+
 .title {
-  //font-size: 2rem;
-  //font-weight: 700;
-  color: $color-secundario;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
-.foto{
-    // agregar un borde redondeado a la imagen
-    border-radius: 5%;
-    // agregar un borde de 1px de color gris
-    border: 3px solid $color-detalle;
-}
+
 button {
-  background-color: $color-principal;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--font-white);
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
 
   &:hover {
-    background-color: $color-acciones;
+    background-color: var(--action-color);
+  }
+
+  &:disabled {
+    background-color: var(--primary-light);
+    cursor: not-allowed;
   }
 }
 
 a {
-  color: $color-principal;
+  color: var(--primary-color);
   text-decoration: none;
 
   &:hover {
-    color: $color-secundario;
+    color: var(--secondary-color);
   }
 }
 
 hr {
-  border: 1px solid $color-detalle;
-}
-
-
-// Variables de la paleta de colores
-$color-base-fondo: #F2F1E1; // Crema claro
-$color-principal: #6B7B56; // Verde seco medio
-$color-secundario: #4B5A38; // Verde seco oscuro
-$color-detalle: #D1D1D1; // Gris suave
-$color-acciones: #4E3629; // Marrón oscuro
-
-// Clases personalizadas
-
-.contact-title {
-  color: $color-principal;
-  margin-bottom: 20px;
-}
-
-.contact-form {
-  background-color: $color-base-fondo;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-label {
-  color: $color-secundario;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.contact-input,
-.contact-textarea {
-  background-color: $color-base-fondo;
-  border: 1px solid $color-secundario;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 14px;
-  color: $color-secundario;
-  transition: border-color 0.3s ease;
-  
-  &:focus {
-    border-color: $color-principal;
-    outline: none;
-  }
-}
-
-.contact-submit-btn {
-  background-color: $color-principal;
-  border-color: $color-principal;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 4px;
-  
-  &:hover {
-    background-color: $color-secundario;
-    border-color: $color-secundario;
-  }
+  border: 1px solid var(--detail-color);
 }

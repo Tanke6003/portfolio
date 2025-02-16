@@ -1,0 +1,26 @@
+// // _themes.scss
+
+// @mixin apply-palette($palette) {
+//     --base-color: map-get($palette, base-color);
+//     --primary-light: map-get($palette, primary-light);
+//     --primary-color: map-get($palette, primary-color);
+//     --secondary-color: map-get($palette, secondary-color);
+//     --tertiary-color: map-get($palette, tertiary-color);
+//     --detail-color: map-get($palette, detail-color);
+//     --action-color: map-get($palette, action-color);
+//     --font-black: map-get($palette, font-black);
+//     --font-white: map-get($palette, font-white);
+//   }
+@mixin apply-palette($palette) {
+  :root {
+    --base-color: #{map-get($palette, base-color)};
+    --primary-light: #{map-get($palette, primary-light)};
+    --primary-color: #{map-get($palette, primary-color)};
+    --secondary-color: #{map-get($palette, secondary-color)};
+    --tertiary-color: #{map-get($palette, tertiary-color)};
+    --detail-color: #{map-get($palette, detail-color)};
+    --action-color: #{map-get($palette, action-color)};
+    --font-black: #{map-get($palette, font-black)};
+    --font-white: #{map-get($palette, font-white)};
+  }
+}

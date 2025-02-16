@@ -28,6 +28,7 @@ export class ContactComponent {
         ...this.contactForm.value, 
         subject: `${this.contactForm.value.name} sent a message from portfolio website`, 
         access_key: '7003ffb2-3867-49bb-87d7-c00fef0bc29f',
+        from_name: 'Contact Form Portfolio',
         redirect: '/',
       };
 

@@ -7,12 +7,14 @@ export interface Social {
   alt: string;
 }
 @Component({
-  selector: 'app-social',
+  selector: 'app-network',
   imports: [],
-  templateUrl: './social.component.html',
-  styleUrl: './social.component.scss'
+  templateUrl: './network.component.html',
+  styleUrl: './network.component.scss'
 })
-export class SocialComponent {
+export class NetworkComponent {
+  email: string = 'Ruben.Farias.1999@Outlook.es'
+  showTooltip: boolean = false;
  socials: Social[] = [
     {
       name: 'Github',
@@ -36,4 +38,7 @@ export class SocialComponent {
       alt: 'Youtube'
     }
  ];
+ copyEmail(): void {
+    navigator.clipboard.writeText(this.email);
+  }
 }
