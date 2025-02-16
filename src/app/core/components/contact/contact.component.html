@@ -1,17 +1,19 @@
 
-<form class="contact-form">
+<form class="contact-form"  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+     <!-- Replace with your Access Key -->
+     <input type="hidden" name="access_key" value="7003ffb2-3867-49bb-87d7-c00fef0bc29f">
     <h2 class="contact-title">Contact</h2>
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div class="form-group">
                 <label for="name" class="contact-label">Name</label>
-                <input type="text" class="form-control contact-input" id="name" placeholder="Your Name">
+                <input type="text" class="form-control contact-input" id="name" placeholder="Your Name" name="name" required  formControlName="name">
             </div>
         </div>
         <div class="col-md-6 col-sm-12">
             <div class="form-group">
                 <label for="email" class="contact-label">Email address</label>
-                <input type="email" class="form-control contact-input" id="email" placeholder="Your Email">
+                <input type="email" class="form-control contact-input" id="email" placeholder="Your Email" name="email" required formControlName="email">
             </div>
         </div>
     </div>
@@ -19,13 +21,14 @@
         <div class="col-sm-12">
             <div class="form-group">
                 <label for="message" class="contact-label">Message</label>
-                <textarea class="form-control contact-textarea" id="message" rows="3" placeholder="Your Message"></textarea>
+                <textarea class="form-control contact-textarea" id="message" rows="3" placeholder="Your Message" name="message" required formControlName="message" ></textarea>
             </div>
         </div>
     </div>
+    <input type="hidden" name="redirect" value="/">
     <div class="row">
         <div class="col-sm-12 mt-3">
-            <button type="submit" class="btn btn-primary contact-submit-btn">Submit</button>
+            <button type="submit" class="btn btn-primary contact-submit-btn" [disabled]="contactForm.invalid">Submit</button>
         </div>
     </div>
     
