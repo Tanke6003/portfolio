@@ -3,29 +3,23 @@
 @import './styles/theme';
 
 .green-brown {
-  :root {
+
     @include apply-palette($green-brown);
-  }
 }
 .soft-blue {
-  :root {
     @include apply-palette($blue-soft);
-  }
+  
 }
 .royal-blue {
-  :root {
+
     @include apply-palette($royal-blue);
-  }
+  
 }
-.royal-purple {
-  :root {
-    @include apply-palette($royal-purple);
-  }
-}
+
 .purple {
-  :root {
+
     @include apply-palette($purple);
-  }
+
 }
 
 
@@ -55,7 +49,9 @@ button {
   cursor: pointer;
 
   &:hover {
-    background-color: var(--action-color);
+    // hacer mas claro el color de fondo
+
+    filter: brightness(110%); 
   }
 
   &:disabled {

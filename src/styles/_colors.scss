@@ -52,7 +52,7 @@ $green-brown: (
   primary-color: #6B7B56,     // Medium Dry Green
   secondary-color: #4B5A38,   // Dark Dry Green
   tertiary-color: #647450,    // Olive Green
-  tertiary-color-brown: #4E3629, // Dark Brown
+  tertiary-color-alternative: #4E3629, // Dark Brown
   secondary-background: #FFFFFF, // White
   detail-color: #D1D1D1,      // Soft Gray
   action-color: #4E3629,      // Action Brown
@@ -67,7 +67,7 @@ $blue-soft: (
   primary-color: #4A6FA5,     // Royal Blue
   secondary-color: #2C4875,   // Dark Sapphire Blue
   tertiary-color: #1E3552,    // Deep Navy
-  tertiary-color-gray: #3B4F68, // Slate Blue-Gray
+  tertiary-color-alternative: #3B4F68, // Slate Blue-Gray
   secondary-background: #FFFFFF, // White
   detail-color: #B0B8C5,      // Soft Silver Blue
   action-color: #1C3D5A,      // Action Dark Blue
@@ -81,29 +81,30 @@ $royal-blue:(
     primary-color: #3A5F9A,       // Royal Blue  
     secondary-color: #1E3A5F,     // Deep Midnight Blue  
     tertiary-color: #C9A66B,      // Elegant Gold  
+    tertiary-color-alternative: #D4AF37, // Rich Gold
     detail-color: #D4AF37,        // Rich Gold  
     action-color: #8C6C3E,        // Bronze Action Color  
     font-black: #1A1B1D,          // Black Font  
     font-white: #F7F7F7          // White Font  
 );
 // Paleta Royal Purple
-$royal-purple: (
-  base-color: #F5F5F5,        // Soft White
-  primary-light: #AFC8E7,     // Soft Sky Blue
-  primary-color: #3A5F9A,     // Royal Blue
-  secondary-color: #1E3A5F,   // Deep Midnight Blue
-  tertiary-color: #C9A66B,    // Elegant Gold
-  detail-color: #D4AF37,      // Rich Gold
-  action-color: #8C6C3E,      // Bronze Action Color
-  font-black: #1A1B1D,        // Black Font
-  font-white: #F7F7F7         // White Font
-);
+// $base-color: #F5F5F5;          // Soft White  
+// $primary-light: #AFC8E7;       // Soft Sky Blue  
+// $primary-color: #3A5F9A;       // Royal Blue  
+// $secondary-color: #1E3A5F;     // Deep Midnight Blue  
+// $tertiary-color: #C9A66B;      // Elegant Gold  
+// $detail-color: #D4AF37;        // Rich Gold  
+// $action-color: #8C6C3E;        // Bronze Action Color  
+// $font-black: #1A1B1D;          // Black Font  
+// $font-white: #F7F7F7;          // White Font  
+
 $purple:(
 base-color: #F5F5F5,          // Soft White
 primary-light: #B0A1C7,       // Soft Lavender
 primary-color: #7D6CAB,       // Royal Purple
 secondary-color: #4A3F6A,     // Dark Purple
 tertiary-color: #9B6E9D,      // Muted Purple (sustituido por un tono más púrpura)
+tertiary-color-alternative: #9B6E9D, // Muted Purple (sustituido por un tono más púrpura)
 detail-color: #A178B2,        // Soft Violet (sustituido por un tono de violeta suave)
 action-color: #6C4A82,        // Deep Violet Action Color (sustituido por un tono púrpura oscuro)
 font-black: #1A1B1D,          // Black Font

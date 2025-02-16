@@ -15,6 +15,7 @@ setTheme(theme: string) {
 
   // Agregar la nueva clase
   document.body.classList.add(theme);
+  window.localStorage.setItem('theme', theme);
 
   }
 }

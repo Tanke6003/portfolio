@@ -25,12 +25,15 @@
             ],
             "stylePreprocessorOptions": {
               "sass": {
-          "silenceDeprecations": ["mixed-decls", "color-functions", "global-builtin", "import"]
-        },
-                            "includePaths": [
-                         
-                            ]
-                        },
+                "silenceDeprecations": [
+                  "mixed-decls",
+                  "color-functions",
+                  "global-builtin",
+                  "import"
+                ]
+              },
+              "includePaths": []
+            },
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -40,11 +43,12 @@
               }
             ],
             "styles": [
-              
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

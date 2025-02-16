@@ -12,7 +12,7 @@
 //     --font-white: map-get($palette, font-white);
 //   }
 @mixin apply-palette($palette) {
-  :root {
+  .theme {
     --base-color: #{map-get($palette, base-color)};
     --primary-light: #{map-get($palette, primary-light)};
     --primary-color: #{map-get($palette, primary-color)};
