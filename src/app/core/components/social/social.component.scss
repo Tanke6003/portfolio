@@ -1,0 +1,40 @@
+.linkedin {
+    
+    background-color: rgb(10, 102, 194) ; /* LinkedIn's brand color */
+    color: white;
+
+}
+
+.badge{
+    padding: 8px 8px;
+    border-radius: 7px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.linkedin:hover {
+    background-color: #005C8E; /* Darker LinkedIn color on hover */
+}
+
+.badge-icon {
+    width: 30px;  /* Adjust size as necessary */
+    height: 30px;
+    margin-right: 2px;  /* Space between icon and text */
+}
+.github {
+    background-color: #000000; /* GitHub's brand color */
+    color: white;
+}
+.github:hover {
+    background-color: #333; /* Darker GitHub color on hover */
+}
+.youtube {
+    background-color: #FF0000; /* YouTube's brand color */
+    color: white;
+}
+.youtube:hover {
+    background-color: #CC0000; /* Darker YouTube color on hover */
+}
