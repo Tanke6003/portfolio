@@ -1,3 +1,7 @@
+
+/* Importing @ngxpert/hot-toast SCSS file. */
+@use '@ngxpert/hot-toast/styles';
+
 // styles.scss
 @import './styles/colors';
 @import './styles/theme';
@@ -71,4 +75,8 @@ a {
 
 hr {
   border: 1px solid var(--detail-color);
+}
+.hot-toast-custom-class{
+  background-color: var(--primary-color)!important;
+  color: var(--font-white)!important;
 }
