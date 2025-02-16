@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HotToastService } from '@ngxpert/hot-toast';
 export interface Social {
   name: string;
   url: string;
@@ -38,7 +39,52 @@ export class NetworkComponent {
       alt: 'Youtube'
     }
  ];
+  constructor(private toastService:HotToastService) { }
  copyEmail(): void {
-    navigator.clipboard.writeText(this.email);
+  console.log("copied");
+  navigator.clipboard.writeText(this.email);
+  let themeElement = document.querySelector('.theme');
+
+  let background = getComputedStyle(document.body).getPropertyValue('--primary-color');
+  let color = getComputedStyle(document.body).getPropertyValue('--font-white');
+  console.log(background, color);
+  console.log(themeElement);
+
+  const showToast = () => {
+    this.toastService.show('Email copied to clipboard', {
+      icon: '📋',
+      position: 'top-right',
+      style: {
+        background: background,
+        color: color,
+      },
+
+    });
+  };
+
+  if (themeElement) {
+    background = getComputedStyle(themeElement).getPropertyValue('--primary-color').trim();
+    color = getComputedStyle(themeElement).getPropertyValue('--font-white').trim();
+    console.log("sele", background, color);
+    showToast();
+  } else {
+    const observer = new MutationObserver((mutations, obs) => {
+      themeElement = document.querySelector('.theme');
+      if (themeElement) {
+        background = getComputedStyle(themeElement).getPropertyValue('--primary-color').trim();
+        color = getComputedStyle(themeElement).getPropertyValue('--font-white').trim();
+        console.log("sele", background, color);
+        showToast();
+        obs.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+
   }
 }
