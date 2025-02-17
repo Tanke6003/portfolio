@@ -1,5 +1,7 @@
 @import '../../../../styles/theme';
-
+.card{
+  height: 100%;
+}
 .card-body {
   background-color: var(--base-color-light);
   
@@ -12,6 +14,9 @@
     color: var(--base-color);
     
   }
+}
+.card-title {
+  color: var(--secondary-color);
 }
 .project-card {
   margin-bottom: 20px;
@@ -28,4 +33,14 @@
     line-clamp: 30;
     -webkit-box-orient: vertical;
 
+}
+.icon{
+  color: var(--font-color-dark);
+  width: 22px;
+}
+.icon-button{
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

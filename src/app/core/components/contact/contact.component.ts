@@ -1,6 +1,10 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { environment } from '../../../../environments/environment';
+
+
+
 
 @Component({
   selector: 'app-contact',
@@ -11,9 +15,12 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class ContactComponent {
   contactForm: FormGroup;
+  accessKey: string = '';
   resultMessage: string = '';
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.accessKey = environment.emailKey;
+    console.log(this.accessKey);
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -27,7 +34,7 @@ export class ContactComponent {
       const formData = { 
         ...this.contactForm.value, 
         subject: `${this.contactForm.value.name} sent a message from portfolio website`, 
-        access_key: '7003ffb2-3867-49bb-87d7-c00fef0bc29f',
+        access_key: this.accessKey,
         from_name: 'Contact Form Portfolio',
         redirect: '/',
       };

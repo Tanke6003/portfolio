@@ -1,19 +1,29 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xxl-4  col-xl-5 col-lg-6 col-md-6 col-sm-12 ">
-            <div class="card  project-card">
-                <img src="imgs/mygithub.png" class="card-img-top" alt="Project 1">
-                <div class="card-body">
-                    <h5 class="card-title">My github</h5>
-                    <p class="card-text">
-                        Lorem ipsum odor amet, consectetuer adipiscing elit. Aliquet in dictum taciti ipsum gravida ad felis semper ultrices tristique metus felis eros volutpat litora euismod himenaeos montes adipiscing metus suscipit vitae adipiscing scelerisque pellentesque aliquet fermentum suscipit at rhoncus taciti dui rhoncus bibendum curabitur penatibus odio netus aliquet elementum tincidunt vulputate.
-                    </p>
-                </div>
-                <div class="card-footer d-flex justify-content-between">
-                    <a href="#" class="btn ">Repository</a>
-                    <a href="#" class="btn ">Demo</a>
+@if(projects.length > 0) {
+<section id="projects" class="container mt-4 " >
+        <h2 class="title  m-0">Projects</h2>
+        <div class="row">
+            @for(project of projects; track project.title) {
+            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-6 col-sm-12  mt-4   ">
+                <div class="card project-card">
+                    <img [src]="project.image" class="card-img-top " [alt]="project.title">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description }}</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <a [href]="project.repository" class="btn icon-button" target="_blank">
+                            <img src="imgs/icons/github-white.svg" alt="" class="icon pe-1"> Repository
+                        </a>
+                        <a [routerLink]="project.details" class="btn icon-button">
+                            <img src="imgs/icons/details.svg" alt="" class="icon pe-1"> Details
+                        </a>
+                        <a [href]="project.demo" class="btn icon-button" target="_blank">
+                            <img src="imgs/icons/web.svg" alt="" class="icon pe-1"> View
+                        </a>
+                    </div>
                 </div>
             </div>
+            }
         </div>
-    </div>
-</div>
+</section>
+}
