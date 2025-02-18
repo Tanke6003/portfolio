@@ -1,0 +1,52 @@
+.container-fluid.main{
+    // un background-color degradado con la paleta Royal Purple
+
+    background: linear-gradient(135deg, #3A5F9A, #1E3A5F);
+
+    // un color de fuente blanco
+    color: #F7F7F7;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+  
+    .card-body {
+      padding: 30px;
+  
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #7f8c8d;
+      }
+  
+      ul {
+        margin-top: 15px;
+  
+        li {
+          font-size: 16px;
+          color: #34495e;
+          margin-bottom: 8px;
+  
+          i {
+            color: #27ae60;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,45 @@
+<div class="container-fluid main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Blog Ruben Farias</h1>
+                <h3>Actividad Integradora. Comunicación humano-computadora</h3>
+            </div>
+        </div>
+        <div class="row">
+          @for(platform of platforms; track platform.name) {
+            <div class="col-md-12 mt-4">
+              <div class="card shadow-sm border-light rounded">
+                <div class="card-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-7 col-md-12">
+                        <h2 class="card-title ">{{ platform.name }}</h2>
+                        <p class="card-description text-muted">{{ platform.description }}</p>
+                        <h3 class="mt-4">Elementos de la interfaz:</h3>
+                        <ul class="list-unstyled">
+                          @for(element of platform.elements; track element) {
+                            <li><i class="bi bi-check-circle"></i> {{ element }}</li>
+                          }
+                        </ul>
+                      </div>
+                      <div class="col-lg-5 col-md-12 d-flex justify-content-center align-items-center">
+                        <img src="{{ platform.image }}" alt="{{ platform.name }}" class="img-fluid rounded-3 shadow-sm">
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="mt-4">Analogía Física:</h3>
+                  <p>{{ platform.analogy }}</p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+        <div class="row">
+            <div class="col-12 my-3">
+                <a [routerLink]="['/home']" class="btn btn-primary">Visita mi portafolio</a>
+            </div>
+        </div>
+      </div>
+      
+</div>
