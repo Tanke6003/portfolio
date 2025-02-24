@@ -40,7 +40,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/ads.txt"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -102,7 +103,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/ads.txt"
             ],
             "styles": [
               "src/styles.scss"
